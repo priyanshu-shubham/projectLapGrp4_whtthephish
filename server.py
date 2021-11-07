@@ -8,7 +8,11 @@ app = Flask("__main__")
 
 @app.route("/")
 def home():
-    return "This is the Home page"
+    return render_template('index.html')
+
+@app.route("/signUp")
+def signUp():
+    return render_template('signUp.html')
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', port = PORT, debug = True)
