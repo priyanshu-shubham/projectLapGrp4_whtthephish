@@ -30,12 +30,12 @@
 
 ## Group Members
 
-1. Shashwat Singh (B19056)
-2. Prashant Kumar (B19101)
-3. Rohan Raj Kansal (B19108)
-4. Sourav Sehgal (B19059)
-5. Priyanshu Shubham (B19189)
-6. Pritish Chugh (B19187)
-7. Ravi Kumar (B19191)
+1. [Shashwat Singh (B19056)](https://github.com/shashwat0003)
+2. [Prashant Kumar (B19101)](https://github.com/prashant280920)
+3. [Rohan Raj Kansal (B19108)](https://github.com/BeingHomosapien)
+4. [Sourav Sehgal (B19059)](https://github.com/SouravSehgal-3009)
+5. [Priyanshu Shubham (B19189)](https://github.com/priyanshu-shubham)
+6. [Pritish Chugh (B19187)](https://github.com/Pritishchugh22)
+7. [Ravi Kumar (B19191)](https://github.com/RaviKumar7870)
 
 ### **Megha Sharma (Mentor)**
