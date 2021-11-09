@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css">
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  
+  <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h1 style="margin:auto; text-align:center;">Profile</h1>
+  <div class="container">
+    <img src="https://www.whatsappprofiledpimages.com/wp-content/uploads/2021/08/Profile-Photo-Wallpaper.jpg" alt="Avatar" class="image">   
+  </div>
+
+  <div class="container">    
+    <h3 style="margin-bottom: 0px;">Progression:</h3>
+    <div class="progress2 progress-moved">
+      <div class="progress-bar2" >
+      </div>                       
+    </div> 
+    <h3 style="margin-bottom: -5px;">Score:</h3>
+    <div class="score" >
+      <p style="text-align: center; margin: auto; color:#fff">50000</p>
+    </div>
+    <h3 style="margin-bottom: -5px;">Stars🌟 : 12/24</h3>
+  </div>
+
+</div>
+
+<div class="main" id="main">
+  <span id="open" class="burger" onclick="openNav()">&#9776; </span>
+    <br>
+    <h1 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Wht The Phish!!</h1><br>
+    <div class="wrapper">
+        <button class="card unlock">
+            <h1 >Level 1</h1>
+            <h1>⭐⭐</h1>
+        </button>
+        <button class="card unlock">
+            <h1 >Level 2</h1>
+            <h1>⭐⭐⭐</h1>
+        </button>
+        <button class="card unlock">
+            <h1 >Level 3</h1>
+            <h1>⭐</h1>
+        </button>
+        <button class="card unlock">
+            <h1 >Level 4</h1>
+            <h1>⭐⭐</h1>
+        </button>
+        <button class="card unlock">
+            <h1 >Level 5</h1>
+            <h1>⭐⭐</h1>
+        </button>
+        <button class="card unlock">
+            <h1 >Level 6</h1>
+            <h1>⭐⭐</h1>
+        </button>
+        <button class="card lock">
+            <h1 >Level 7</h1>         
+        </button>
+        <button class="card lock" disabled>
+            <h1 >Level 8</h1>
+        </button>
+    </div>
+</div>
+
+<script>
+  if(window.innerWidth>500){
+    document.getElementById("open").style.display = "none";
+    document.getElementById("close").style.display = "none";
+    document.getElementById("mySidenav").style.width = "25%";
+      document.getElementById("main").style.marginLeft = "25%";
+  }
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0%";
+    document.getElementById("main").style.marginLeft= "0%";
+  }
+  </script>
+</body>
+</html> 
