@@ -10,12 +10,12 @@
 <body>
 	<section class="wrapper fadeInDown">
 		<div id="formContent">
-		  <h2 > <a  class="inactive underlineHover" href = "/">Sign In </a></h2>
+		  <h2 > <a  class="inactive underlineHover" href = "/login">Sign In </a></h2>
 		  <h2 class="active">Sign Up </h2>
-		  <form>
+		  <form action="/signUp" method="post">
 			<input type="text" id="name" class="fadeIn second" name="name" placeholder="Name">
             <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email">
-			<input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+			<input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
 			<input type="submit" class="fadeIn fourth" value="Sign Up">
 		  </form>
 

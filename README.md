@@ -20,13 +20,20 @@
     - Activate the virtual env<br>
         For Windows run - ***.\env\Scripts\activate***<br>
         For Linux run - ***source env/bin/activate***<br>
-    Follow the instructions given after you create a env successfully 
+    Follow the instructions given after you create a env successfully .
 
-4. Then run, ***pip install -r requirements.txt***
-5. Now run the server
-    - For Windows run - ***python server.py***
-    - For Linux run - ***python3 server.py***
-6. If you have reached this step, you are good to go.
+4. Create a `secret.py` file in src folder with the follwoing content.
+    ```python
+    USERNAME="[Your MongoDB Username]"
+    PASSWORD="[Your MONGODB Password]"
+    SECRET_KEY="[A Secret Key For the App]"
+    ```
+
+5. Then run, ***pip install -r requirements.txt***
+6. Now run the server
+    - For Windows run - ***python -m src.server***
+    - For Linux run - ***python3 -m src.server***
+7. If you have reached this step, you are good to go.
 
 ## Group Members
 
