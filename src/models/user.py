@@ -7,11 +7,20 @@ from src.common.database import Database
 
 class User(object):
 
-    def __init__(self, email, password, name, _id=None):
+    def __init__(self, email, password, name, _id=None,level1=0,level2=0,level3=0,level4=0,level5=0,level6=0,level7=0,stars=0):
         self.email = email
         self.password = password
         self.name=name
         self._id = uuid.uuid4().hex if _id is None else _id
+        self.level1=level1
+        self.level2=level2
+        self.level3=level3
+        self.level4=level4
+        self.level5=level5
+        self.level6=level6
+        self.level7=level7
+        self.stars=stars
+        
     
     @staticmethod
     def validate_Form(name,email,password):
@@ -23,6 +32,11 @@ class User(object):
         if len(password)<5:
             valid = False
         return valid
+    
+    @staticmethod
+    def updateUser(email,updateDict):
+        user=User.get_by_email(email)
+        Database.update("users",{'email': user.email,},updateDict)
 
     @classmethod
     def get_by_email(cls, email):
@@ -69,7 +83,15 @@ class User(object):
             "email": self.email,
             "_id": self._id,
             "password": self.password,
-            "name":self.name
+            "name":self.name,
+            "level1":self.level1,
+            "level2":self.level2,
+            "level3":self.level3,
+            "level4":self.level4,
+            "level5":self.level5,
+            "level6":self.level6,
+            "level7":self.level7,
+            "stars":self.stars
         }
 
     def save_to_mongo(self):

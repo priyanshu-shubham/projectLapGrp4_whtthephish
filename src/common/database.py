@@ -10,12 +10,16 @@ class Database(object):
 
     @staticmethod
     def initialize():
-        client = pymongo.MongoClient(Database.URI)
+        client = pymongo.MongoClient(Database.URI,connect=False)
         Database.DATABASE = client['WhtThePhish']
 
     @staticmethod
     def insert(collection, data):
         Database.DATABASE[collection].insert(data)
+        
+    @staticmethod
+    def update(collection,query,updates):
+        Database.DATABASE[collection].update_one(query,updates,upsert=False)
 
     @staticmethod
     def find(collection, query):

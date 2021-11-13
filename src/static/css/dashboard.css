@@ -52,10 +52,11 @@ body {
 .image {
   display: block;
   margin:auto;
-  width: 100%;
-  height: auto;
+  width: 250px;
+  height:250px;
   border-radius: 50%;
   border: 3px solid black;
+  margin-top:100px;
 }
 
 

@@ -54,7 +54,17 @@ def signUp():
 
 @app.route("/dashboard")
 def dashboard():
-    return render_template('dashboard.html')
+    user=User.get_by_email(session['email'])
+    return render_template('dashboard.html',user=user)
+
+@app.route('/level1',methods=["GET","POST"])
+def level1():
+    if request.method=='POST':
+        print(request.form['question1'])
+        print(request.form['question2'])
+        print(request.form['question3'])
+        print(request.form['question4'])
+    return render_template('Level1.html')
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', port = PORT, debug = True)
