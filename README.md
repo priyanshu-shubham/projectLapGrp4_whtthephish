@@ -22,7 +22,7 @@
         For Linux run - ***source env/bin/activate***<br>
     Follow the instructions given after you create a env successfully .
 
-4. Create a `secret.py` file in src folder with the follwoing content.
+4. Create a `secrets.py` file in src folder with the follwoing content.
     ```python
     USERNAME="[Your MongoDB Username]"
     PASSWORD="[Your MONGODB Password]"
