@@ -47,42 +47,54 @@
             {% endfor %}</h1>
         </button>
       </a>
-        <button class="card {% if user.stars>=2 %}unlock{%else%} lock {%endif%}">
+    <a href="./level1">    
+      <button class="card {% if user.stars>=2 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 2</h1>
             <h1>{% for i in range(user.level2) %}
               ⭐
             {% endfor %}</h1>
         </button>
+      </a>  
+      <a href="./level1">  
         <button class="card {% if user.stars>=4 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 3</h1>
             <h1>{% for i in range(user.level3) %}
               ⭐
             {% endfor %}</h1>
         </button>
+      </a>  
+      <a href="./level1">  
         <button class="card {% if user.stars>=6 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 4</h1>
             <h1>{% for i in range(user.level4) %}
               ⭐
             {% endfor %}</h1>
         </button>
+      </a>  
+      <a href="./level1">  
         <button class="card {% if user.stars>=9 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 5</h1>
             <h1>{% for i in range(user.level5) %}
               ⭐
             {% endfor %}</h1>
         </button>
+      </a>  
+      <a href="./level1">  
         <button class="card {% if user.stars>=11 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 6</h1>
             <h1>{% for i in range(user.level6) %}
               ⭐
             {% endfor %}</h1>
         </button>
+      </a>  
+      <a href="./level1">  
         <button class="card {% if user.stars>=14 %}unlock{%else%} lock {%endif%}">
           <h1>Level 7</h1>
           <h1>{% for i in range(user.level7) %}
             ⭐
           {% endfor %}</h1>      
         </button>
+      </a>  
     </div>
 </div>
 
