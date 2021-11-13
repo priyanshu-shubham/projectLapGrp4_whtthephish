@@ -1,8 +1,12 @@
 from flask import Flask, render_template
 from flask import redirect, url_for, request,session
 from src.common.database import Database
-from src.models.user import User 
+from src.models.user import User
+from src.models.question import Question  
 from src.secrets import SECRET_KEY
+import random
+from src.common.calc_functions import cal_star
+
 
 PORT = 8000
 
@@ -58,15 +62,39 @@ def dashboard():
     else:
         return redirect(url_for('login'))
 
-@app.route('/level1',methods=["GET","POST"])
-def level1():
+@app.route('/level<level>',methods=["GET","POST"])
+def level(level):
     if session['email'] is not None: 
         if request.method=='POST':
-            print(request.form['question1'])
-            print(request.form['question2'])
-            print(request.form['question3'])
-            print(request.form['question4'])
-        return render_template('Level1.html')
+            ans = []
+            correct_ans = []
+            for i in range(1,11):
+                t = request.form.get(f"question{i}",-1)
+                if "yes"==t:
+                    ans.append("1")
+                elif "no"==t:
+                    ans.append("0")
+                else:
+                    ans.append("-1")
+                correct_ans.append(request.form[f"{i}"])
+            count = 0
+            for i in range(10):
+                if ans[i] == correct_ans[i]:
+                    count+=1
+            user = User.get_by_email(session["email"])
+            
+            star = cal_star(count)
+            star = max(star,getattr(user, f"level{level}"))
+            total_star = user.stars - getattr(user, f"level{level}") + star
+            User.updateUser(user.email, {"stars": total_star, f"level{level}": star})
+            
+            return redirect(url_for('dashboard'))
+        data_phishing = Question.get_by_category_and_phishing(int(level), 1)
+        legitimate = Question.get_by_category_and_phishing(int(level), 0)
+        data = random.sample(data_phishing, 6) + random.sample(legitimate, 4)
+        random.shuffle(data)
+      
+        return render_template(f'Level{level}.html', data = data)
     else:
         return redirect(url_for('login'))
 

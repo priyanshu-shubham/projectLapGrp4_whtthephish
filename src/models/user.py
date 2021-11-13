@@ -36,7 +36,7 @@ class User(object):
     @staticmethod
     def updateUser(email,updateDict):
         user=User.get_by_email(email)
-        Database.update("users",{'email': user.email,},updateDict)
+        Database.update("users",{'email': user.email,},{"$set":updateDict})
 
     @classmethod
     def get_by_email(cls, email):

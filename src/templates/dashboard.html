@@ -23,7 +23,7 @@
     </div> 
     <h3 style="margin-bottom: -5px;">Score:</h3>
     <div class="score" >
-      <p style="text-align: center; margin: auto; color:#fff">50000</p>
+      <p style="text-align: center; margin: auto; color:#fff">{{200*user.stars}}</p>
     </div>
     <h3 style="margin-bottom: -5px;">Stars🌟 : {{user.stars}}/24</h3>
   </div>
@@ -47,7 +47,7 @@
             {% endfor %}</h1>
         </button>
       </a>
-    <a href="./level1">    
+    <a href="./level2">    
       <button class="card {% if user.stars>=2 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 2</h1>
             <h1>{% for i in range(user.level2) %}
@@ -55,7 +55,7 @@
             {% endfor %}</h1>
         </button>
       </a>  
-      <a href="./level1">  
+      <a href="./level3">  
         <button class="card {% if user.stars>=4 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 3</h1>
             <h1>{% for i in range(user.level3) %}
@@ -63,7 +63,7 @@
             {% endfor %}</h1>
         </button>
       </a>  
-      <a href="./level1">  
+      <a href="./level4">  
         <button class="card {% if user.stars>=6 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 4</h1>
             <h1>{% for i in range(user.level4) %}
@@ -71,7 +71,7 @@
             {% endfor %}</h1>
         </button>
       </a>  
-      <a href="./level1">  
+      <a href="./level5">  
         <button class="card {% if user.stars>=9 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 5</h1>
             <h1>{% for i in range(user.level5) %}
@@ -79,7 +79,7 @@
             {% endfor %}</h1>
         </button>
       </a>  
-      <a href="./level1">  
+      <a href="./level6">  
         <button class="card {% if user.stars>=11 %}unlock{%else%} lock {%endif%}">
             <h1 >Level 6</h1>
             <h1>{% for i in range(user.level6) %}
@@ -87,7 +87,7 @@
             {% endfor %}</h1>
         </button>
       </a>  
-      <a href="./level1">  
+      <a href="./level7">  
         <button class="card {% if user.stars>=14 %}unlock{%else%} lock {%endif%}">
           <h1>Level 7</h1>
           <h1>{% for i in range(user.level7) %}

@@ -48,7 +48,7 @@ body, html{
 }
 
 
-#one{
+.one{
     height: 100%;
     width: 100%;
     background-color: blue;
@@ -57,33 +57,6 @@ body, html{
     display: flex;
 }
 
-#two{
-    height: 100%;
-    width: 100%;
-    background-color: yellow;
-    align-content: center;
-    justify-content: center;
-    display: flex;
-}
-
-#three{
-    height: 100%;
-    width: 100%;
-    background-color: green;
-    align-content: center;
-    justify-content: center;
-    display: flex;
-}
-
-#four{
-    height: 100%;
-    width: 100%;
-    background-color: orange;
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    
-}
 
 .content{
     /* width: 80%; */
