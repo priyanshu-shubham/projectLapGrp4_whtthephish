@@ -1,8 +1,5 @@
 from flask import Flask, render_template
 from flask import redirect, url_for, request,session
-import os
-
-from pymongo.common import validate
 from src.common.database import Database
 from src.models.user import User 
 from src.secrets import SECRET_KEY
@@ -11,6 +8,11 @@ PORT = 8000
 
 app = Flask("__main__")
 app.secret_key=SECRET_KEY
+
+@app.before_first_request
+def initialize_database():
+    Database.initialize()
+    session['email']=None
 
 @app.route("/")
 def index():
@@ -27,10 +29,6 @@ def login():
         else:
             return "Invalid Username Or Password"
     return render_template('index.html')
-
-@app.before_first_request
-def initialize_database():
-    Database.initialize()
 
 
 
@@ -54,17 +52,28 @@ def signUp():
 
 @app.route("/dashboard")
 def dashboard():
-    user=User.get_by_email(session['email'])
-    return render_template('dashboard.html',user=user)
+    if session['email'] is not None:
+        user=User.get_by_email(session['email'])
+        return render_template('dashboard.html',user=user)
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/level1',methods=["GET","POST"])
 def level1():
-    if request.method=='POST':
-        print(request.form['question1'])
-        print(request.form['question2'])
-        print(request.form['question3'])
-        print(request.form['question4'])
-    return render_template('Level1.html')
+    if session['email'] is not None: 
+        if request.method=='POST':
+            print(request.form['question1'])
+            print(request.form['question2'])
+            print(request.form['question3'])
+            print(request.form['question4'])
+        return render_template('Level1.html')
+    else:
+        return redirect(url_for('login'))
+
+@app.route('/logout')
+def logout():
+    User.logout()
+    return redirect(url_for('login'))
 
 if __name__ == "__main__":
     app.run(host = '0.0.0.0', port = PORT, debug = True)
