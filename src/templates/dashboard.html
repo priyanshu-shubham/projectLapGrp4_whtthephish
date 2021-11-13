@@ -15,7 +15,7 @@
     <img src="https://picsum.photos/200/300" alt="Avatar" class="image">   
   </div>
 
-  <div class="container">    
+  <div class="container infoContainer">    
     <h3 style="margin-bottom: 0px;">Progression:</h3>
     <div class="progress2 progress-moved">
       <div class="progress-bar2" style="width:{{(user.stars/21)*100}}%" >
@@ -27,6 +27,10 @@
     </div>
     <h3 style="margin-bottom: -5px;">Stars🌟 : {{user.stars}}/24</h3>
   </div>
+
+    <div class="container logOut" onclick="logOut()">
+      Logout
+    </div>
 
 </div>
 
@@ -79,9 +83,6 @@
             ⭐
           {% endfor %}</h1>      
         </button>
-        <button class="card lock" disabled>
-            <h1 >Level 8</h1>
-        </button>
     </div>
 </div>
 
@@ -99,6 +100,9 @@
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0%";
     document.getElementById("main").style.marginLeft= "0%";
+  }
+  function logOut(){
+    window.location.href = "/logout";
   }
   </script>
 </body>
