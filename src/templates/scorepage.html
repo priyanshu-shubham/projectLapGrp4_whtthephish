@@ -12,7 +12,7 @@
 <div class="main" id="main">
   <span id="open" class="burger" onclick="openNav()">&#9776; </span>
     <br>
-    <h1 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Hello {{user.name}}!! Keep Going</h1><br>
+    <h1 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Hello {{user.name}}!!{% if score<4 %}You can do better!{% else %}Keep Going{% endif %}</h1><br>
 
     <h2 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Level {{level}}</h2><br>
     <div class="wrapper">
