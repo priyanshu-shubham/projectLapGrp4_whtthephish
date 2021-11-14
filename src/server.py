@@ -32,7 +32,7 @@ def login():
                 User.login(email)
                 return redirect(url_for('dashboard'))
             else:
-                return "Invalid Username Or Password"
+                return render_template("login.html",red_msg="Invalid username or password!")
         return render_template('login.html')
     return redirect(url_for('dashboard'))
 
@@ -40,20 +40,22 @@ def login():
 
 @app.route("/signUp",methods=["GET","POST"])
 def signUp():
-    if request.method == "POST":
-        email=request.form['email']
-        u_password=request.form['password']
-        name=request.form['name']
-        if not User.validate_Form(name,email,u_password):
-            return "Form Validation Failed!"
-        if User.get_by_email(email) is not None:
-            return "Email Already Registered!"
-        success=User.register(email,u_password,name)
-        if not success:
-            return "Something Went Wrong. Please try Again Later."
-        return redirect('/dashboard')
+    if session['email']==None:
+        if request.method == "POST":
+            email=request.form['email']
+            u_password=request.form['password']
+            name=request.form['name']
+            if not User.validate_Form(name,email,u_password):
+                return render_template("signUp.html",msg="Form Validation Failed!")
+            if User.get_by_email(email) is not None:
+                return render_template("signUp.html",red_msg="Email Already Registered.")
+            success=User.register(email,u_password,name)
+            if not success:
+                return render_template("signUp.html",msg="Something wen wrong. Please try again later.")
+            return redirect('/dashboard')
         
-    return render_template('signUp.html')
+        return render_template('signUp.html')
+    return redirect(url_for('dashboard'))
 
 
 @app.route("/dashboard")

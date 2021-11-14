@@ -15,8 +15,8 @@
 <body  class="is-boxed has-animations">
 	
 	<div class="body-wrap boxed-container">
-	<div style="display:flex;justify-content:center"><div class="alert">hello</div></div>
-	<div style="display:flex;justify-content:center"><div class="alert_red">hello</div></div>
+		{% if msg is defined %}<div style="display:flex;justify-content:center"><div class="alert">{{msg}}</div></div>{%endif%}
+		{% if red_msg is defined %}<div style="display:flex;justify-content:center"><div class="alert_red">{{red_msg}}</div></div>{%endif%}
 		<header class="site-header">
 			<div class="container">
 				<div class="site-header-inner">
