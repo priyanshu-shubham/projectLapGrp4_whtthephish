@@ -51,7 +51,7 @@ def signUp():
                 return render_template("signUp.html",red_msg="Email Already Registered.")
             success=User.register(email,u_password,name)
             if not success:
-                return render_template("signUp.html",msg="Something wen wrong. Please try again later.")
+                return render_template("signUp.html",msg="Something went wrong. Please try again later.")
             return redirect('/dashboard')
         
         return render_template('signUp.html')
