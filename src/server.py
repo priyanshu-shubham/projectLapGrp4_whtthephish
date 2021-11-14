@@ -20,7 +20,7 @@ def initialize_database():
 
 @app.route("/")
 def index():
-    return "Welcome"
+    return render_template('welcome.html')
 
 @app.route("/login",methods=["GET","POST"])
 def login():
