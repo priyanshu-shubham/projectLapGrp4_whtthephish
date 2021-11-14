@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css">
+  <title>Scorecard for Level {{level}}</title>
 
 </head>
 <body>
@@ -13,20 +14,27 @@
     <br>
     <h1 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Hello {{user.name}}!! Keep Going</h1><br>
 
-    <h2 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Level x</h2><br>
+    <h2 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Level {{level}}</h2><br>
     <div class="wrapper">
         <button class="card unlock" >
-            <h1 >Current Score</h1>
-            <h1> ⭐⭐⭐</h1>
+            <h1 >Your Score</h1>
+            <h1>{{score*10}}</h1>
         </button>
   
       <button class="card unlock">
             <h1 >Maximum Score</h1>
-            <h1 >⭐</h1>
-        </button>
+            <h1 >100</h1>
+      </button>
+      <button class="card unlock" >
+            <h1 >Your Stars</h1>
+            <h1>{% for i in range(star) %}
+              ⭐
+            {% endfor %}</h1>
+      </button>
       </div>
+
     <div class="wrapper">
-      <a href="./levelx">  
+      <a href="./dashboard">  
         <button class="card unlock" >
             <h1 >🏢 Dashboard</h1>
         </button>
