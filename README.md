@@ -15,25 +15,42 @@
 2. Clone it in your local machine using the forked repo
 3. Create a virtual enviornment in your local machine in the folder you cloned the repo,
 
-    - ***pip install virtualenv***
-    - ***virtualenv env***
-    - Activate the virtual env<br>
-        For Windows run - ***.\env\Scripts\activate***<br>
-        For Linux run - ***source env/bin/activate***<br>
-    Follow the instructions given after you create a env successfully .
+    ```bash
+    pip install virtualenv
+    virtualenv env
+    ```
+4. Activate the virtual env<br>
+   For Windows run
+   ```bash
+   .\env\Scripts\activate
+   ```
+   For Linux run
+   ```bash
+   source env/bin/activate
+   ```
+   Follow the instructions given after you create a env successfully .
 
-4. Create a `secrets.py` file in src folder with the follwoing content.
+5. Create a `secrets.py` file in src folder with the follwoing content.
     ```python
     USERNAME="[Your MongoDB Username]"
     PASSWORD="[Your MONGODB Password]"
     SECRET_KEY="[A Secret Key For the App]"
     ```
 
-5. Then run, ***pip install -r requirements.txt***
-6. Now run the server
-    - For Windows run - ***python -m src.server***
-    - For Linux run - ***python3 -m src.server***
-7. If you have reached this step, you are good to go.
+5. Then run
+   ```bash
+   pip install -r requirements.txt
+   ```
+7. Now run the server<br>
+     For Windows run
+     ```bash
+     python -m src.server
+     ```
+     For Linux run
+     ```bash
+     python3 -m src.server
+     ```
+8. If you have reached this step, you are good to go.
 
 ## Group Members
 
