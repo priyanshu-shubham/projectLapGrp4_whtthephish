@@ -16,12 +16,13 @@ body, html{
 .wrapper{
     /* background-color: tomato; */
     width: 38%;
-    height: 57%;
+    height: 65%;
     overflow: hidden;
     position: relative;
     top: 20%;
     margin:auto;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    transition: 1s ease-in;
 }
 
 .outer{
@@ -120,6 +121,13 @@ button:hover{
 
 }
 
+.question p{
+    padding-right: 2px;
+    /* overflow: scroll; */
+    word-wrap: break-word;
+    width: 100%;
+}
+
 .options{
     padding: 10px;
     font-size: 20px;
@@ -160,7 +168,7 @@ button:hover{
     }
     .wrapper{
         width:93%;
-        height:50%;
+        height:70%;
         top:20%;
     }
     .question{

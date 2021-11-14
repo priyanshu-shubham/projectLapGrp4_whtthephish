@@ -18,6 +18,25 @@
         </div>
         <form action="/level3" method="POST">
             <ul class="sliders">
+                <li class="slider">
+                    <div class="one">
+                        <div class="content">
+                            <div class="category-title question">
+                                <h2 class="spoofing-title"> URL Spoofing Trick 3 - Random/Unrelated/Trustworthy Domain, with Brand in Subdomain </h2>
+                            </div>
+                            <div class="options"> 
+                                <p class="spoofing-info option"> A Phisher can include the brand name into the subdomain of a URL in combination 
+                                with a random/unrelated/trustworthy domain name.<br>
+                                Example:- http://paypal.
+                                mark-chippy.com/account-setup/ for Paypal or http://www.amazon.account.com/ for Amazon. Here the subdomain contains the brand name 
+                                in combination with a random/unrelated/trustworthy domain name. </p>
+                            </div> 
+                        </div> 
+                        
+                        <button value="prev" class="backward">Previous</button>
+                        <button value="next" class="forward">Next</button> 
+                    </div>
+                </li>
                 {% for i in range(1, (data|length) + 1) %}
                 <li class="slider">
                     <div class="one">
@@ -25,7 +44,7 @@
                             <div class="question">
                             <p>
                                 {{i}} . What do you think of this URL for {{data[i-1].url_brand}}, is it Phishing or NOT??<br>
-                                {{data[i-1].url}}
+                                "{{data[i-1].url}}"
                             </p>
                             </div>
                             <div class="options">

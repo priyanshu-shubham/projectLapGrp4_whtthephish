@@ -18,6 +18,27 @@
         </div>
         <form action="/level2" method="POST">
             <ul class="sliders">
+                <li class="slider">
+                    <div class="one">
+                        <div class="content">
+                            <div class="category-title question">
+                                <h2 class="spoofing-title"> URL Spoofing Trick 2 - Random/Unrelated/Trustworthy Domain, without Brand </h2>
+                            </div>
+                            <div class="options"> 
+                                <p class="spoofing-info option"> This trick uses
+                                    random/unrelated or trustworthy names or strings as domain name and
+                                    does not include the brand name of the targeted website in any other part of
+                                    the URL.<br>
+                                    Example:-  http://www.szuhsa.fr/login.html, http://www.weather.com/
+                                    login.html or https://secure-payment.com to impersonate PayPal. You can see that Paypal is not included in any part of the URL.
+                                </p>
+                            </div>
+                             
+                            <button value="prev" class="backward">Previous</button>
+                            <button value="next" class="forward">Next</button>
+                        </div>
+                    </div>
+                </li>
                 {% for i in range(1, (data|length) + 1) %}
                 <li class="slider">
                     <div class="one">
@@ -25,7 +46,7 @@
                             <div class="question">
                                 <p>
                                 {{i}} . What do you think of this URL for {{data[i-1].url_brand}}, is it Phishing or NOT??<br>
-                                {{data[i-1].url}}
+                                "{{data[i-1].url}}"
                             </p>
                             </div>
                             <div class="options">
