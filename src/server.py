@@ -32,7 +32,7 @@ def login():
             return redirect(url_for('dashboard'))
         else:
             return "Invalid Username Or Password"
-    return render_template('index.html')
+    return render_template('login.html')
 
 
 
