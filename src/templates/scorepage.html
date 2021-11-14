@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css">
+
+</head>
+<body>
+
+
+<div class="main" id="main">
+  <span id="open" class="burger" onclick="openNav()">&#9776; </span>
+    <br>
+    <h1 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Hello {{user.name}}!! Keep Going</h1><br>
+    <br>
+    <h2 style="margin:auto; text-align:center; text-shadow: 0px 0px 10px #01102c; color:#fff;">Level x</h2><br>
+    <div class="wrapper">
+        <button class="card unlock" >
+            <h1 >Current Score  ⭐⭐⭐</h1>
+        </button>
+  
+      <button class="card unlock">
+            <h1 >Maximum Score ⭐</h1>
+        </button>
+      </div>
+    <div class="wrapper">
+      <a href="./levelx">  
+        <button class="card unlock" >
+            <h1 >🔁  Try Again</h1>
+        </button>
+      </a>  
+    </div>
+</div>
+
+<script>
+  if(window.innerWidth>500){
+    document.getElementById("open").style.display = "none";
+    document.getElementById("close").style.display = "none";
+    document.getElementById("mySidenav").style.width = "25%";
+      document.getElementById("main").style.marginLeft = "25%";
+  }
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0%";
+    document.getElementById("main").style.marginLeft= "0%";
+  }
+  function logOut(){
+    window.location.href = "/logout";
+  }
+  </script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
