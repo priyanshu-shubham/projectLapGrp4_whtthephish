@@ -23,19 +23,20 @@
                     <div class="one">
                         <div class="content">
                             <div class="question">
-                                {{i}} ). What do you think of this URL for {{data[i-1].url_brand}}, is it Phishing or NOT??<br>
+                                <p>{{i}} ). What do you think of this URL for {{data[i-1].url_brand}}, is it Phishing or NOT??<br>
                                 {{data[i-1].url}}
+                                </p>
                             </div>
                             <div class="options">
-                                <label for="radio1">
+                                <label for="radio1{{i}}">
                                     <div class="option">
-                                        <input type="radio" name="question{{i}}" value="yes" id="radio1">
+                                        <input type="radio" name="question{{i}}" value="yes" id="radio1{{i}}">
                                         YES, It's a phishing URL
                                     </div>
                                 </label>
-                                <label for="radio2">
+                                <label for="radio2{{i}}">
                                 <div class="option">
-                                    <input type="radio" name="question{{i}}" value="no" id="radio2">
+                                    <input type="radio" name="question{{i}}" value="no" id="radio2{{i}}">
                                     NO, It's not a phishing URL
                                 </div>
                             </label>
@@ -44,7 +45,7 @@
                                
                             </div>
                             
-                             <input type="submit" value="Submit" class="last">
+                            <input type="submit" value="Submit" class="last">
                             <button value="prev" class="backward">Previous</button>
                             <button value="next" class="forward">Next</button>
                         </div>

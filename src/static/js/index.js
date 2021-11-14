@@ -34,7 +34,7 @@ window.setInterval( () => {
     }
 
     if(currentpage == totalPages){
-        $('.forward').css("opacity", "0");
+        $('.forward').css("display","None");
         $('.last').css("display", "block");
         $('.last').css("position", "absolute");
         
