@@ -52,11 +52,12 @@ body {
 .image {
   display: block;
   margin:auto;
-  width: 250px;
-  height:250px;
-  border-radius: 50%;
-  border: 3px solid black;
+  width: 150px;
+  height:150px;
+  border-radius: 30%;
+  border: 3px solid white;
   margin-top:50px;
+  margin-bottom: 50px;
 }
 
 
@@ -84,7 +85,6 @@ body {
 }
 .lock{
     background: #4181ee;
-    opacity:0.3;
   
 }
 .unlock{
@@ -137,7 +137,7 @@ body {
 }
   */
 .progress2 {
-  border-radius: 30px;
+  border-radius: 3px;
   background: #000;  
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
 }
@@ -153,11 +153,12 @@ body {
 
 .progress-bar2 {
   height: 18px;
-  border-radius: 30px;
+  border-radius: 3px;
   background-image: 
     linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
   transition: 0.4s linear;  
-  transition-property: width, background-color;    
+  transition-property: width, background-color;
+
 }
 
 .progress-moved .progress-bar2 {
@@ -200,7 +201,8 @@ body {
 }
 
 .logOut{
-  background-color: #4181ee;
+  background-color: #ee1b8f;
+  color:#fff;
   border-radius: 10%;
   padding: 10px;
   border-color:2px solid #fff; 
@@ -210,6 +212,6 @@ body {
 
 .logOut:hover{
   color:white;
-  background-color: #193159;
+  background-color: #ee1b50;
   cursor:pointer;
 }
