@@ -62,6 +62,12 @@ def dashboard():
     else:
         return redirect(url_for('login'))
 
+@app.route("/score")
+def score():
+    user = User.get_by_email(session['email'])
+    return render_template('scorepage.html',user=user)
+
+
 @app.route('/level<level>',methods=["GET","POST"])
 def level(level):
     if session['email'] is not None: 
