@@ -27,14 +27,18 @@
                                 {{data[i-1].url}}
                             </div>
                             <div class="options">
+                                <label for="radio1">
+                                    <div class="option">
+                                        <input type="radio" name="question{{i}}" value="yes" id="radio1">
+                                        YES, It's a phishing URL
+                                    </div>
+                                </label>
+                                <label for="radio2">
                                 <div class="option">
-                                    <input type="radio" name="question{{i}}" value="yes">
-                                    YES
+                                    <input type="radio" name="question{{i}}" value="no" id="radio2">
+                                    NO, It's not a phishing URL
                                 </div>
-                                <div class="option">
-                                    <input type="radio" name="question{{i}}" value="no">
-                                    NO
-                                </div>
+                            </label>
                                 
                                 <input value="{{data[i-1].phishing}}" name="{{i}}" style="display:none">
                                
