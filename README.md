@@ -4,6 +4,14 @@
 
 >This Project is made to make poeple aware about the phising websites that are increasing at an alarming rate. We have made an education app which will first teach poeple about the various types of phishing URLs which will be followed by an exercise session to ensure that the user actually understood the concepts.
 
+## Technology Stack
+1. **Frontend**:- HTML, CSS, Javascript
+2. **Backend**:- Flask, Pymongo, Jinja
+3. **Language**: Python
+4. **Database**: MongoDB
+5. **Version Control**: Git
+6. **Deployment**: Heroku
+
 ## Datasets
 
 1. [Aalto Phishstrom Dataset](https://research.aalto.fi/en/datasets/phishstorm-phishing-legitimate-url-dataset)
