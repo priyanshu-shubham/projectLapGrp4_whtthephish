@@ -62,4 +62,5 @@
 6. [Pritish Chugh (B19187)](https://github.com/Pritishchugh22)
 7. [Ravi Kumar (B19191)](https://github.com/RaviKumar7870)
 
-### **Megha Sharma (Mentor)**
+## Mentor
+- [Megha Sharma](https://github.com/m36h4)
