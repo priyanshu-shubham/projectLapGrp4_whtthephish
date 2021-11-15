@@ -1,7 +1,6 @@
 import pymongo
 from src import secrets
 import dns
-import certifi
 
 
 
@@ -12,8 +11,7 @@ class Database(object):
 
     @staticmethod
     def initialize():
-        ca = certifi.where()
-        client = pymongo.MongoClient(Database.URI,connect=False, tlsCAFile=ca)
+        client = pymongo.MongoClient(Database.URI,connect=False)
         Database.DATABASE = client['WhtThePhish']
 
     @staticmethod
