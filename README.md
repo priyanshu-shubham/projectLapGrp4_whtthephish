@@ -4,6 +4,12 @@
 
 >This Project is made to make poeple aware about the phising websites that are increasing at an alarming rate. We have made an education app which will first teach poeple about the various types of phishing URLs which will be followed by an exercise session to ensure that the user actually understood the concepts.
 
+## About Phishing
+>The fraudulent practice of creating false websites purporting to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.
+<img src="https://user-images.githubusercontent.com/54496028/141749055-b6f99d4c-9380-4f4b-84b8-a82085ed6567.png" width=800px style="display:inline;"> 
+
+
+
 ## Technology Stack
 1. **Frontend**:- HTML, CSS, Javascript
 2. **Backend**:- Flask, Pymongo, Jinja
@@ -11,6 +17,15 @@
 4. **Database**: MongoDB
 5. **Version Control**: Git
 6. **Deployment**: Heroku
+
+## Flow Chart
+![WhtThePhish](https://user-images.githubusercontent.com/54496028/141750338-84482ff9-3c68-4bcc-865a-30c3915eafc7.png)
+
+## UML Class Diagram
+![UML class](https://user-images.githubusercontent.com/54496028/141750188-8adeb55c-fb77-470e-acde-8ad465b7ca38.png)
+
+## Directory Structure
+![Directory_Structure](https://user-images.githubusercontent.com/54496028/141750118-e24c92d7-1fbe-4593-9dce-a17927d101ac.png)
 
 ## Datasets
 
