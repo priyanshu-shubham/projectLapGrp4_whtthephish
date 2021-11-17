@@ -1,4 +1,4 @@
-# Wht The Phish!!
+# ![icon](https://user-images.githubusercontent.com/60234231/142180112-831373c4-1f01-4010-aee7-e7bbe915dbf8.png) Wht The Phish!!
 
 ## Project Large Applications Practicum (Group 4)
 
