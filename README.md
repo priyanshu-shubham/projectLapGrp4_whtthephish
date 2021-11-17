@@ -60,10 +60,20 @@
     SECRET_KEY="[A Secret Key For the App]"
     ```
 
-5. Then run
+5. Now install requirements using
    ```bash
    pip install -r requirements.txt
    ```
+6. Now insert Questions in database <br>
+     For Windows run
+     ```bash
+     python -m src.common.insertQuestions
+     ```
+     For Linux run
+     ```bash
+     python3 -m src.common.insertQuestions
+     ```
+
 7. Now run the server<br>
      For Windows run
      ```bash
