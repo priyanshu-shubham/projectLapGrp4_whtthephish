@@ -1,37 +1,99 @@
-## Welcome to GitHub Pages
+# ![icon](https://user-images.githubusercontent.com/60234231/142180112-831373c4-1f01-4010-aee7-e7bbe915dbf8.png) Wht The Phish!!
 
-You can use the [editor on GitHub](https://github.com/priyanshu-shubham/projectLapGrp4_whtthephish/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Project Large Applications Practicum (Group 4)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+>This Project is made to make poeple aware about the phising websites that are increasing at an alarming rate. We have made an education app which will first teach poeple about the various types of phishing URLs which will be followed by an exercise session to ensure that the user actually understood the concepts.
 
-### Markdown
+## About Phishing
+>The fraudulent practice of creating false websites purporting to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.
+<img src="https://user-images.githubusercontent.com/54496028/141749055-b6f99d4c-9380-4f4b-84b8-a82085ed6567.png" width=800px style="display:inline;"> 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Technology Stack
+1. **Frontend**:- HTML, CSS, Javascript
+2. **Backend**:- Flask, Pymongo, Jinja
+3. **Language**: Python
+4. **Database**: MongoDB
+5. **Version Control**: Git
+6. **Deployment**: Heroku
 
-- Bulleted
-- List
+## Flow Chart
+![WhtThePhish](https://user-images.githubusercontent.com/54496028/141750338-84482ff9-3c68-4bcc-865a-30c3915eafc7.png)
 
-1. Numbered
-2. List
+## UML Class Diagram
+![UML class](https://user-images.githubusercontent.com/54496028/141750188-8adeb55c-fb77-470e-acde-8ad465b7ca38.png)
 
-**Bold** and _Italic_ and `Code` text
+## Directory Structure
+![Directory_Structure](https://user-images.githubusercontent.com/54496028/141750118-e24c92d7-1fbe-4593-9dce-a17927d101ac.png)
 
-[Link](url) and ![Image](src)
-```
+## Datasets
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+1. [Aalto Phishstrom Dataset](https://research.aalto.fi/en/datasets/phishstorm-phishing-legitimate-url-dataset)
+2. [UNB URL Dataset 2016](https://www.unb.ca/cic/datasets/url-2016.html)
 
-### Jekyll Themes
+## Setting Up the Enviornment
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/priyanshu-shubham/projectLapGrp4_whtthephish/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Fork The repo
+2. Clone it in your local machine using the forked repo
+3. Create a virtual enviornment in your local machine in the folder you cloned the repo,
 
-### Support or Contact
+    ```bash
+    pip install virtualenv
+    virtualenv env
+    ```
+4. Activate the virtual env<br>
+   For Windows run
+   ```bash
+   .\env\Scripts\activate
+   ```
+   For Linux run
+   ```bash
+   source env/bin/activate
+   ```
+   Follow the instructions given after you create a env successfully .
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+5. Create a `secrets.py` file in src folder with the follwoing content.
+    ```python
+    USERNAME="[Your MongoDB Username]"
+    PASSWORD="[Your MONGODB Password]"
+    SECRET_KEY="[A Secret Key For the App]"
+    ```
+
+5. Now install requirements using
+   ```bash
+   pip install -r requirements.txt
+   ```
+6. Now insert Questions in database <br>
+     For Windows run
+     ```bash
+     python -m src.common.insertQuestions
+     ```
+     For Linux run
+     ```bash
+     python3 -m src.common.insertQuestions
+     ```
+
+7. Now run the server<br>
+     For Windows run
+     ```bash
+     python -m src.server
+     ```
+     For Linux run
+     ```bash
+     python3 -m src.server
+     ```
+8. If you have reached this step, you are good to go.
+
+## Group Members
+
+1. [Shashwat Singh (B19056)](https://github.com/shashwat0003)
+2. [Prashant Kumar (B19101)](https://github.com/prashant280920)
+3. [Rohan Raj Kansal (B19108)](https://github.com/BeingHomosapien)
+4. [Sourav Sehgal (B19059)](https://github.com/SouravSehgal-3009)
+5. [Priyanshu Shubham (B19189)](https://github.com/priyanshu-shubham)
+6. [Pritish Chugh (B19187)](https://github.com/Pritishchugh22)
+7. [Ravi Kumar (B19191)](https://github.com/RaviKumar7870)
+
+## Mentor
+- [Megha Sharma](https://github.com/m36h4)
